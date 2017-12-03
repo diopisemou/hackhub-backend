@@ -2,4 +2,335 @@
 
 {% block body %}
 
+ <div class="container-fluid display-table">
+        <div class="row display-table-row">
+            <div class="col-md-2 col-sm-1 hidden-xs display-table-cell v-align box" id="navigation">
+                <div class="logo">
+                    <a href="{{ url('webapp_user_homepage') }}"><img src="{{ asset('assets/img/logo-blue.png') }}" alt="HackHub Logo" class="hidden-xs hidden-sm">
+                        <img src="{{ asset('assets/img/logo-blue.png') }}" alt="HackHub Logo" class="visible-xs visible-sm circle-logo">
+                    </a>
+                </div>
+                <div class="navi">
+                    <ul>
+                        <li class="active"><a href="#"><i class="fa fa-home" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Home</span></a></li>
+                        <li><a href="#"><i class="fa fa-tasks" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Projects</span></a></li>
+                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Messages</span></a></li>
+                        <li><a href="#"><i class="fa fa-calendar" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Calendar</span></a></li>
+                        <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Users</span></a></li>
+                        <li><a href="#"><i class="fa fa-users" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Team</span></a></li>
+                        <li><a href="#"><i class="fa fa-bar-chart" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Statistics</span></a></li>
+                        <li><a href="#"><i class="fa fa-money" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Finances</span></a></li>
+                        <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Settings</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-10 col-sm-11 display-table-cell v-align">
+                <!--<button type="button" class="slide-toggle">Slide Toggle</button> -->
+                <div class="row">
+                    <header>
+                        <div class="col-md-7">
+                            <nav class="navbar-default pull-left">
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="offcanvas" data-target="#side-menu" aria-expanded="false">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+                            </nav>
+                            <div class="search hidden-xs hidden-sm">
+                                <input type="text" placeholder="Search" id="search">
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="header-rightside">
+                                <ul class="list-inline header-top pull-right">
+                                    <li class="hidden-xs"><a href="#" class="add-project" data-toggle="modal" data-target="#add_project">Add Project</a></li>
+                                    <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+                                    <li>
+                                        <a href="#" class="icon-info">
+                                            <i class="fa fa-bell" aria-hidden="true"></i>
+                                            <span class="label label-primary">3</span>
+                                        </a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="http://jskrishna.com/work/merkury/images/user-pic.jpg" alt="user">
+                                            <b class="caret"></b></a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <div class="navbar-content">
+                                                    <span>Foulen Ben Foulen</span>
+                                                    <p class="text-muted small">
+                                                        Foulen@heavenerd.com
+                                                    </p>
+                                                    <div class="divider">
+                                                    </div>
+                                                    <a href="{{ url('homepage') }}" class="view btn-sm active">Log out </a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </header>
+                </div>
+                <div class="user-dashboard">
+                    <h1>Hello, Foulen</h1>
+                    <div class="row">
+                        <div class="col-md-5 col-sm-5 col-xs-12 gutter">
+
+                            <!--<div class="sales">
+                                <h2>Your Sale</h2>
+
+                                <div class="btn-group">
+                                    <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span>Period:</span> Last Year
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a href="#">2012</a>
+                                        <a href="#">2014</a>
+                                        <a href="#">2015</a>
+                                        <a href="#">2016</a>
+                                    </div>
+                                </div>
+                            </div>-->
+                        </div>
+                        <div class="col-md-7 col-sm-7 col-xs-12 gutter">
+
+                           <!-- <div class="sales report">
+                                <h2>Report</h2>
+                                <div class="btn-group">
+                                    <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span>Period:</span> Last Year
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a href="#">2012</a>
+                                        <a href="#">2014</a>
+                                        <a href="#">2015</a>
+                                        <a href="#">2016</a>
+                                    </div>
+                                </div>
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!-- Modal -->
+    <div id="add_project" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+
+                <div class="modal-header login-header">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <h4 class="modal-title">Add Project</h4>
+                </div>
+                
+                
+<div class="image-container set-full-height" >
+	    
+	    <!--   Big container   -->
+         <div class="col-sm-12">
+		            <!-- Wizard container -->
+		            <div class="wizard-container">
+		                <div class="card wizard-card" data-color="red" id="wizard">
+		                    <form action="" method="">
+		                <!--        You can switch " data-color="blue" "  with one of the next bright colors: "green", "orange", "red", "purple"             -->
+
+		                    	<div class="wizard-header">
+		                        	<h3 class="wizard-title">
+		                        		Create a Competition
+		                        	</h3>
+									<h5>This information will let us know more about your Event .</h5>
+		                    	</div>
+								<div class="wizard-navigation">
+									<ul>
+			                            <li><a href="#details" data-toggle="tab">Account</a></li>
+			                            <li><a href="#captain" data-toggle="tab">Event Type</a></li>
+			                            <li><a href="#description" data-toggle="tab">Extra Details</a></li>
+			                        </ul>
+								</div>
+
+		                        <div class="tab-content">
+		                            <div class="tab-pane" id="details">
+		                            	<div class="row">
+			                            	<div class="col-sm-10">
+			                                	<h4 class="info-text"> Let's start with the basic details.</h4>
+			                            	</div>
+		                                	<div class="col-sm-6">
+												<div class="input-group">
+													<span class="input-group-addon">
+														<i class="material-icons">email</i>
+													</span>
+													<div class="form-group label-floating">
+			                                          	<label class="control-label">Your Email</label>
+			                                          	<input name="name" type="text" class="form-control">
+			                                        </div>
+												</div>
+
+												<div class="input-group">
+													<span class="input-group-addon">
+														<i class="material-icons">lock_outline</i>
+													</span>
+													<div class="form-group label-floating">
+			                                          	<label class="control-label">Your Password</label>
+			                                          	<input name="name2" type="password" class="form-control">
+			                                        </div>
+												</div>
+
+		                                	</div>
+		                                	<div class="col-sm-6">
+		                                    	<div class="form-group label-floating">
+		                                        	<label class="control-label">Country</label>
+	                                        		<select class="form-control">
+														<option disabled="" selected=""></option>
+	                                                	<option value="Afghanistan"> Afghanistan </option>
+	                                                	<option value="Albania"> Albania </option>
+	                                                	<option value="Algeria"> Algeria </option>
+	                                                	<option value="American Samoa"> American Samoa </option>
+	                                                	<option value="Andorra"> Andorra </option>
+	                                                	<option value="Angola"> Angola </option>
+	                                                	<option value="Anguilla"> Anguilla </option>
+	                                                	<option value="Antarctica"> Antarctica </option>
+	                                                	<option value="...">...</option>
+		                                        	</select>
+		                                    	</div>
+												<div class="form-group label-floating">
+		                                        	<label class="control-label">Event Name</label>
+	                                        		<input name="eventname" type="text" class="form-control">
+			                                        
+		                                    	</div>
+		                                	</div>
+		                            	</div>
+		                            </div>
+		                            <div class="tab-pane" id="captain">
+		                                <h4 class="info-text">What type of event would you want to create? </h4>
+		                                <div class="row">
+		                                    <div class="col-sm-10 ">
+		                                        <div class="col-sm-4">
+		                                            <div class="choice" data-toggle="wizard-radio" rel="tooltip" title="Choose this event if you're hosting a Developer Event.">
+		                                                <input type="radio" name="job" value="Design">
+		                                                <div class="icon">
+		                                                    <i class="material-icons">web</i>
+		                                                </div>
+		                                                <h6>Hackathon</h6>
+		                                            </div>
+		                                        </div>
+		                                        <div class="col-sm-4">
+		                                            <div class="choice" data-toggle="wizard-radio" rel="tooltip" title="Choose this event if you're hosting an Entreprenarial Event.">
+		                                                <input type="radio" name="job" value="Code">
+		                                                <div class="icon">
+		                                                    <i class="material-icons">business_center</i>
+		                                                </div>
+		                                                <h6>Startup</h6>
+		                                            </div>
+		                                        </div>
+												<div class="col-sm-4">
+		                                            <div class="choice" data-toggle="wizard-radio" rel="tooltip" title="Choose this event if you're hosting an Designin Event.">
+		                                                <input type="radio" name="job" value="Code">
+		                                                <div class="icon">
+		                                                    <i class="material-icons">color_lens</i>
+		                                                </div>
+		                                                <h6>Design</h6>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                            </div>
+		                            <div class="tab-pane" id="description">
+		                                <div class="row">
+		                                    <h4 class="info-text"> Drop us a small description of your event.</h4>
+		                                    <div class="col-sm-6 ">
+	                                    		<div class="form-group">
+		                                            <label>Event description</label>
+		                                            <textarea class="form-control" placeholder="" rows="6"></textarea>
+		                                        </div>
+		                                    </div>
+		                                    <div class="col-sm-4">
+		                                    	<div class="form-group">
+		                                            <label class="control-label">Example</label>
+		                                            <p class="description">"We will organize the best Hackathon ever :) "</p>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                            </div>
+		                        </div>
+	                        	<div class="wizard-footer">
+	                            	<div class="pull-right">
+	                                    <input type='button' class='btn btn-next btn-fill btn-danger btn-wd' name='next' value='Next' />
+	                                    <input type='button' class='btn btn-finish btn-fill btn-danger btn-wd' name='finish' value='Finish' />
+	                                </div>
+	                                <div class="pull-left">
+	                                    <input type='button' class='btn btn-previous btn-fill btn-default btn-wd' name='previous' value='Previous' />
+
+										<div class="footer-checkbox">
+											<div class="col-sm-12">
+											  <div class="checkbox">
+												  <label>
+													  <input type="checkbox" name="optionsCheckboxes">
+												  </label>
+												  Subscribe to our newsletter
+											  </div>
+										  </div>
+										</div>
+	                                </div>
+	                                <div class="clearfix"></div>
+	                        	</div>
+		                    </form>
+		                </div>
+		            </div> <!-- wizard container -->
+		        
+		</div> <!--  big container -->
+
+
+
+                
+            </div>
+
+        </div>
+    </div>
+
+
 {% endblock %}
+
+
+{% block stylesheets %}
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="{{ asset('assets/css/dashboard-kit.css') }}">
+	<!--     Fonts and icons     -->
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+
+<link rel="stylesheet" type="text/css" media="screen" href="{{ asset('assets/css/material-kit.css') }}">
+
+
+{{ parent() }}
+
+
+{% endblock %}
+
+
+
+{% block javascripts %}
+
+
+{{ parent() }}
+
+<!--for portfolio jquery--> 
+<script src="{{ asset('assets/js/dashboard-kit') }}" type="text/javascript"></script> 
+<!--for portfolio jquery--> 
+<script src="{{ asset('assets/js/material-kit.js') }}" type="text/javascript"></script> 
+
+{% endblock %}
+
+
