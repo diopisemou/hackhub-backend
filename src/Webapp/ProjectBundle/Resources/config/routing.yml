@@ -1,0 +1,9 @@
+webapp_project_homepage:
+    path:     /explore
+    defaults: { _controller: WebappProjectBundle:Default:index }
+webapp_project_details:
+    path:     /explore/project
+    defaults: { _controller: WebappProjectBundle:Details:index }
+webapp_project_add:
+    path:     /project/add
+    defaults: { _controller: WebappProjectBundle:Project:add }

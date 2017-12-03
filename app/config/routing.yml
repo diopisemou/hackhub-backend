@@ -1,0 +1,15 @@
+webapp_api:
+    resource: "@WebappApiBundle/Resources/config/routing.yml"
+    prefix:   /
+
+webapp_user:
+    resource: "@WebappUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+webapp_project:
+    resource: "@WebappProjectBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
