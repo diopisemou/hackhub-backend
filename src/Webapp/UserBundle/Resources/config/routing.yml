@@ -1,0 +1,9 @@
+webapp_user_homepage:
+    path:     /user/
+    defaults: { _controller: WebappUserBundle:Default:index }
+webapp_user_login:
+    path:     /user/login
+    defaults: { _controller: WebappUserBundle:Login:index }
+webapp_user_register:
+    path:     /user/register
+    defaults: { _controller: WebappUserBundle:Register:index }
