@@ -4,9 +4,9 @@ namespace Webapp\ProjectBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class DefaultController extends Controller
+class ProjectController extends Controller
 {
-    public function indexAction()
+    public function addAction()
     {
         return $this->render('@WebappProject/Default/index.html.twig');
     }

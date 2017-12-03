@@ -4,10 +4,10 @@ namespace Webapp\UserBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class DefaultController extends Controller
+class LoginController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('@WebappUser/Default/index.html.twig');
+        return $this->render('@WebappUser/Default/login.html.twig');
     }
 }

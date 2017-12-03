@@ -1,3 +1,7 @@
+webapp_api:
+    resource: "@WebappApiBundle/Resources/config/routing.yml"
+    prefix:   /
+
 webapp_user:
     resource: "@WebappUserBundle/Resources/config/routing.yml"
     prefix:   /

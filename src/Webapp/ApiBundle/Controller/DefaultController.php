@@ -1,6 +1,6 @@
 <?php
 
-namespace Webapp\UserBundle\Controller;
+namespace Webapp\ApiBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
@@ -8,6 +8,6 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('@WebappUser/Default/index.html.twig');
+        return $this->render('@WebappApiBundle/Default/index.html.twig');
     }
 }

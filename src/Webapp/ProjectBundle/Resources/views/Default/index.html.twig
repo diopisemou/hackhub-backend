@@ -1,1 +1,321 @@
-Hello World!
+{% extends 'default/index.html.twig' %}
+
+{% block body %}
+
+   <!--Change the background class to alter background image, options are: benches, boots, buildings, city, metro -->
+<div id="background-wrapper" class="buildings" data-stellar-background-ratio="0.1">
+
+          <!-- ======== @Region: #navigation ======== -->
+          <div id="navigation" class="wrapper">
+
+            <!--Header & navbar-branding region-->
+            <div class="header">
+              <div class="header-inner container">
+                <div class="row">
+                  <div class="col-md-8">
+                    <!--navbar-branding/logo - hidden image tag & site name so things like Facebook to pick up, actual logo set via CSS for flexibility -->
+                    <a class="navbar-brand " href="/" title="Home">
+                      <h1 class="navbar-brand">
+                        <img src="{{ asset('assets/img/logo-blue.png') }}" alt="HackHub Logo">
+                      </h1>
+                    </a>
+                    <div class="navbar-slogan">
+                      Socialnetwork
+                      <br> For Hackathons
+                    </div>
+                  </div>
+                  <!--header rightside-->
+                  <div class="col-md-4">
+                    <!--user menu-->
+                    <ul class="list-inline user-menu pull-right">
+                      <li class="hidden-xs">
+                        <i class="fa fa-edit text-primary"></i>
+                        <a href="{{ url('webapp_user_register') }}" class="text-uppercase">Register</a>
+                      </li>
+                      <li class="hidden-xs">
+                        <i class="fa fa-sign-in text-primary"></i>
+                        <a href="{{ url('webapp_user_login') }}" class="text-uppercase">Login</a>
+                      </li>
+
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="navbar navbar-default">
+                <!--mobile collapse menu button-->
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar">
+                    </span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <div class="navbar-brand navbar-brand-centered">
+                      <a href="{{ url('homepage') }}" title="Home"></a>
+                 </div>
+
+                </div>
+
+                <!--social media icons-->
+                <div class="navbar-text social-media social-media-inline pull-right">
+                  <!--@todo: replace with company social media details-->
+                  <a href="#">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fa fa-linkedin"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fa fa-google-plus"></i>
+                  </a>
+                </div>
+
+                <!--everything within this div is collapsed on mobile-->
+                <div id="header" class="navbar-collapse collapse ">
+                  <div  id="main-menu">
+                      <ul class="nav navbar-nav">
+                          <li>
+                              <a class="active" href="{{ url('webapp_project_homepage') }}" > Explore</a>
+                          </li>
+                          <li>
+                              <a href="{{ url('webapp_project_add') }}" >Start a Hackathon</a>
+                          </li>
+
+                      </ul>
+
+                      <ul class="nav navbar-nav navbar-right">
+                          <li class="dropdown dropdown-mm">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Search
+                                  <b class="fa fa-search"></b>
+                                </a>
+                                <!-- Dropdown Menu -->
+                            <div class="dropdown-menu dropdown-menu-mm dropdown-menu-persist">
+                              <div class="row ">
+                                  <div class="col-md-10">
+                                      <input  placeholder="Hackathon,City,Username..."/>
+                                      <a routerLink="{{ url('homepage') }}"><i class="fa fa-search"></i></a>
+
+                                  </div>
+                                </div>
+                            </div>
+                          </li>
+
+                        <li class="hidden dropdown ">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Template Dropdown
+                            <b class="caret"></b>
+                          </a>
+                          <!-- Dropdown Menu -->
+                          <ul class="dropdown-menu">
+                            <li class="dropdown-header">Flexor Version Pages</li>
+                            <li>
+                              <a href="elements.html" tabindex="-1" class="menu-item">Elements</a>
+                            </li>
+                            <li>
+                              <a href="about.html" tabindex="-1" class="menu-item">About / Inner Page</a>
+                            </li>
+                            <li>
+                              <a href="login.html" tabindex="-1" class="menu-item">Login</a>
+                            </li>
+                            <li>
+                              <a href="register.html" tabindex="-1" class="menu-item">Sign-Up</a>
+                            </li>
+                            
+                          </ul>
+                        </li>
+
+                        <li class="hidden dropdown dropdown-mm">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mega Menu
+                            <b class="caret"></b>
+                          </a>
+                          <!-- Dropdown Menu -->
+                          <ul class="dropdown-menu dropdown-menu-mm dropdown-menu-persist">
+                            <li class="row">
+                              <ul class="col-md-6">
+                                <li class="dropdown-header">Websites and Apps</li>
+                                <li>
+                                  <a href="#">Analysis and Planning</a>
+                                </li>
+                                <li>
+                                  <a href="#">User Experience / Information Architecture</a>
+                                </li>
+                                <li>
+                                  <a href="#">User Interface Design / UI Design</a>
+                                </li>
+                                <li>
+                                  <a href="#">Code &amp; Development / Implementation &amp; Support</a>
+                                </li>
+                              </ul>
+                              <ul class="col-md-6">
+                                <li class="dropdown-header">Enterprise solutions</li>
+                                <li>
+                                  <a href="#">Business Analysis</a>
+                                </li>
+                                <li>
+                                  <a href="#">Custom UX Consulting</a>
+                                </li>
+                                <li>
+                                  <a href="#">Quality Assurance</a>
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+
+                      </ul>
+                  </div>
+                </div>
+                <!--/.navbar-collapse -->
+
+              </div>
+            </div>
+          </div>
+          
+
+<!-- ======== @Region: #content ======== -->
+          <div id="content">
+
+{% block pagecontent %}
+
+              <!-- Mission Statement -->
+              <div class="mission text-center block block-pd-sm block-bg-noise">
+                <div class="container">
+                  <h2 class="text-shadow-white">
+                    Explore All the Hackathons being held on HackHub
+                    <a href="#" class="btn btn-more"><i class="fa fa-plus"></i>Full List</a>
+                  </h2>
+                </div>
+             </div>
+              
+     <div class="testimonials block-contained">
+        <div class="row">
+            <div class="portfolioFilter">
+        <ul>
+          <li><a href="#" data-filter="*" class="current">All</a></li>
+          <li><a href="#" data-filter=".angularhack">Angular Hackathons</a></li>
+          <li><a href="#" data-filter=".csharp">C# Hackathons</a></li>
+          <li><a href="#" data-filter=".designcomp">Design Competions</a></li>
+          <li class="last"><a href="#" data-filter=".unitycomp">Unity Competions</a></li>
+        </ul>
+      </div>
+
+        </div>
+      
+      <div class="row">
+        <ul class="portfolioContainer row">
+
+          <!--Customer testimonial-->
+          <li class="angularhack">
+          <div class="col-md-6 m-b-lg">
+            <h3 class="block-title">
+              Hackathon Title
+            </h3>
+            <blockquote>
+              <p>Hackathon Description</p>
+              <img src="" alt="Hackathon Logo">
+              <small>
+                <strong>Hackathon organizers</strong>
+                <br>
+                <span> <i class="fa fa-location-arrow"></i> Hackathon Location</span>
+                <br>
+                <span> <i class="fa fa-calendar"></i> Hackathon Start Date</span>
+              </small>
+            </blockquote>
+          </div>
+          </li>
+
+<!--Customer testimonial-->
+          <li class="csharp">
+          <div class="col-md-6 m-b-lg">
+            <h3 class="block-title">
+              Hackathon Title
+            </h3>
+            <blockquote>
+              <p>Hackathon Description</p>
+              <img src="" alt="Hackathon Logo">
+              <small>
+                <strong>Hackathon organizers</strong>
+                <br>
+                <span> <i class="fa fa-location-arrow"></i> Hackathon Location</span>
+                <br>
+                <span> <i class="fa fa-calendar"></i> Hackathon Start Date</span>
+              </small>
+            </blockquote>
+          </div>
+          </li>
+          
+          <!--Customer testimonial-->
+          <li class="designcomp">
+          <div class="col-md-6 m-b-lg">
+            <h3 class="block-title">
+              Hackathon Title
+            </h3>
+            <blockquote>
+              <p>Hackathon Description</p>
+              <img src="" alt="Hackathon Logo">
+              <small>
+                <strong>Hackathon organizers</strong>
+                <br>
+                <span> <i class="fa fa-location-arrow"></i> Hackathon Location</span>
+                <br>
+                <span> <i class="fa fa-calendar"></i> Hackathon Start Date</span>
+              </small>
+            </blockquote>
+          </div>
+          </li>
+          
+          <!--Customer testimonial-->
+          <li class="unitycomp">
+          <div class="col-md-6 m-b-lg">
+            <h3 class="block-title">
+              Hackathon Title
+            </h3>
+            <blockquote>
+              <p>Hackathon Description</p>
+              <img src="" alt="Hackathon Logo">
+              <small>
+                <strong>Hackathon organizers</strong>
+                <br>
+                <span> <i class="fa fa-location-arrow"></i> Hackathon Location</span>
+                <br>
+                <span> <i class="fa fa-calendar"></i> Hackathon Start Date</span>
+              </small>
+            </blockquote>
+          </div>
+          </li>
+          
+
+          </ul>
+
+        </div>
+    </div>
+          
+{% endblock %}
+
+</div>
+
+
+
+{% endblock %}
+
+
+
+{% block javascripts %}
+
+<!--for portfolio jquery--> 
+<script src="{{ asset('js/jquery.isotope.js') }}" type="text/javascript"></script> 
+<link type="text/css" rel="stylesheet" id="theme" href="{{ asset('css/jquery-ui-1.8.16.custom.css') }}">
+<link type="text/css" rel="stylesheet" href="{{ asset('css/lightbox.min.css') }}">
+<script type="text/javascript" src="{{ asset('js/jquery.ui.widget.min.js') }}"></script> 
+<script type="text/javascript" src="{{ asset('js/jquery.ui.rlightbox.js') }}"></script> 
+
+{{ parent() }}
+
+{% endblock %}
+
+
