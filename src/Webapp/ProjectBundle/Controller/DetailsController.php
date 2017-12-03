@@ -8,6 +8,6 @@ class DetailsController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('@WebappProject/Default/index.html.twig');
+        return $this->render('@WebappProject/Default/details.html.twig');
     }
 }

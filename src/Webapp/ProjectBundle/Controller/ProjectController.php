@@ -8,6 +8,6 @@ class ProjectController extends Controller
 {
     public function addAction()
     {
-        return $this->render('@WebappProject/Default/index.html.twig');
+        return $this->render('@WebappProject/Default/project.html.twig');
     }
 }

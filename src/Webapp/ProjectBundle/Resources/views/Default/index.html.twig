@@ -204,20 +204,19 @@
         </ul>
       </div>
 
-        </div>
+    
       
-      <div class="row">
-        <ul class="portfolioContainer row">
+      
+        <div class="portfolioContainer row">
 
           <!--Customer testimonial-->
-          <li class="angularhack">
-          <div class="col-md-6 m-b-lg">
+          <div class="angularhack col-md-6 m-b-lg">
             <h3 class="block-title">
               Hackathon Title
             </h3>
             <blockquote>
               <p>Hackathon Description</p>
-              <img src="" alt="Hackathon Logo">
+              <img class="" src="{{ asset('assets/img/misc/ang.png') }}" alt="Hackathon Logo">
               <small>
                 <strong>Hackathon organizers</strong>
                 <br>
@@ -227,17 +226,16 @@
               </small>
             </blockquote>
           </div>
-          </li>
+          
 
 <!--Customer testimonial-->
-          <li class="csharp">
-          <div class="col-md-6 m-b-lg">
+          <div class="csharp col-md-6 m-b-lg">
             <h3 class="block-title">
               Hackathon Title
             </h3>
             <blockquote>
               <p>Hackathon Description</p>
-              <img src="" alt="Hackathon Logo">
+              <img src="{{ asset('assets/img/misc/csharp.png') }}" alt="Hackathon Logo">
               <small>
                 <strong>Hackathon organizers</strong>
                 <br>
@@ -247,50 +245,47 @@
               </small>
             </blockquote>
           </div>
-          </li>
-          
-          <!--Customer testimonial-->
-          <li class="designcomp">
-          <div class="col-md-6 m-b-lg">
-            <h3 class="block-title">
-              Hackathon Title
-            </h3>
-            <blockquote>
-              <p>Hackathon Description</p>
-              <img src="" alt="Hackathon Logo">
-              <small>
-                <strong>Hackathon organizers</strong>
-                <br>
-                <span> <i class="fa fa-location-arrow"></i> Hackathon Location</span>
-                <br>
-                <span> <i class="fa fa-calendar"></i> Hackathon Start Date</span>
-              </small>
-            </blockquote>
-          </div>
-          </li>
-          
-          <!--Customer testimonial-->
-          <li class="unitycomp">
-          <div class="col-md-6 m-b-lg">
-            <h3 class="block-title">
-              Hackathon Title
-            </h3>
-            <blockquote>
-              <p>Hackathon Description</p>
-              <img src="" alt="Hackathon Logo">
-              <small>
-                <strong>Hackathon organizers</strong>
-                <br>
-                <span> <i class="fa fa-location-arrow"></i> Hackathon Location</span>
-                <br>
-                <span> <i class="fa fa-calendar"></i> Hackathon Start Date</span>
-              </small>
-            </blockquote>
-          </div>
-          </li>
           
 
-          </ul>
+          <!--Customer testimonial-->
+          <div class="unitycomp col-md-6 m-b-lg">
+            <h3 class="block-title">
+              Hackathon Title
+            </h3>
+            <blockquote>
+              <p>Hackathon Description</p>
+              <img src="{{ asset('assets/img/misc/unity.jpg') }}" alt="Hackathon Logo">
+              <small>
+                <strong>Hackathon organizers</strong>
+                <br>
+                <span> <i class="fa fa-location-arrow"></i> Hackathon Location</span>
+                <br>
+                <span> <i class="fa fa-calendar"></i> Hackathon Start Date</span>
+              </small>
+            </blockquote>
+          </div>
+
+
+          <!--Customer testimonial-->
+          <div class="designcomp col-md-6 m-b-lg">
+            <h3 class="block-title">
+              Hackathon Title
+            </h3>
+            <blockquote>
+              <p>Hackathon Description</p>
+              <img src="{{ asset('assets/img/misc/design.jpg') }}" alt="Hackathon Logo">
+              <small>
+                <strong>Hackathon organizers</strong>
+                <br>
+                <span> <i class="fa fa-location-arrow"></i> Hackathon Location</span>
+                <br>
+                <span> <i class="fa fa-calendar"></i> Hackathon Start Date</span>
+              </small>
+            </blockquote>
+          </div>
+
+
+          </div>
 
         </div>
     </div>
@@ -305,16 +300,32 @@
 
 
 
-{% block javascripts %}
 
-<!--for portfolio jquery--> 
-<script src="{{ asset('js/jquery.isotope.js') }}" type="text/javascript"></script> 
-<link type="text/css" rel="stylesheet" id="theme" href="{{ asset('css/jquery-ui-1.8.16.custom.css') }}">
-<link type="text/css" rel="stylesheet" href="{{ asset('css/lightbox.min.css') }}">
-<script type="text/javascript" src="{{ asset('js/jquery.ui.widget.min.js') }}"></script> 
-<script type="text/javascript" src="{{ asset('js/jquery.ui.rlightbox.js') }}"></script> 
+{% block stylesheets %}
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="{{ asset('assets/css/main.css') }}">
 
 {{ parent() }}
+
+
+<!--for portfolio jquery--> 
+<link type="text/css" rel="stylesheet" id="theme" href="{{ asset('assets/css/jquery-ui-1.8.16.custom.css') }}">
+<link type="text/css" rel="stylesheet" href="{{ asset('assets/css/lightbox.min.css') }}">
+
+{% endblock %}
+
+
+
+{% block javascripts %}
+
+
+{{ parent() }}
+
+<!--for portfolio jquery--> 
+<script src="{{ asset('assets/js/jquery.isotope.js') }}" type="text/javascript"></script> 
+<script type="text/javascript" src="{{ asset('assets/js/jquery.ui.widget.min.js') }}"></script> 
+<script type="text/javascript" src="{{ asset('assets/js/jquery.ui.rlightbox.js') }}"></script> 
 
 {% endblock %}
 
