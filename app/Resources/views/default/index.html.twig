@@ -13,7 +13,7 @@
                 <div class="row">
                   <div class="col-md-8">
                     <!--navbar-branding/logo - hidden image tag & site name so things like Facebook to pick up, actual logo set via CSS for flexibility -->
-                    <a class="navbar-brand " href="/" title="Home">
+                    <a class="navbar-brand " href="{{ url('homepage') }}" title="Home">
                       <h1 class="navbar-brand">
                         <img src="{{ asset('assets/img/logo-blue.png') }}" alt="HackHub Logo">
                       </h1>
@@ -53,7 +53,7 @@
                     <span class="icon-bar"></span>
                   </button>
                   <div class="navbar-brand navbar-brand-centered">
-                      <a href="{{ url('homepage') }}" title="Home"></a>
+                      <a href="{{ url('homepage') }}" title="Home"></a> 
                  </div>
 
                 </div>
@@ -188,13 +188,13 @@
                             Welcome to <span class="text-primary">HackHub</span>
                           </h2>
                           <h4>
-                            Super flexible responsive theme with a modest design touch.
+                            Super Featured Web App to Help you create, organize , share and enjoy hackathons .
                           </h4>
-                          <p>Perfect for your App, Web service, company or portfolio! Magna tincidunt sociis ac integer amet non. Rhoncus augue? Tempor porttitor sed, aliquet phasellus a, nisi nunc aliquet nec rhoncus enim porttitor ultrices lacus tristique?</p>
-                          <a href="#" class="btn btn-more btn-lg i-right">Sign In <i class="fa fa-plus"></i></a>
+                          <p>Perfect for all IT-Driven Competions</p>
+                          <a href="{{ url('webapp_user_register') }}" class="btn btn-more btn-lg i-right">Sign In <i class="fa fa-sign-in text-primary"></i></a>
                         </div>
                         <div class="col-md-6 col-md-pull-6 hidden-xs">
-                          <img src="{{ asset('assets/img/slides/slide1.png') }}" alt="Slide 1" class="center-block img-responsive">
+                          <img src="{{ asset('assets/img/slides/slide111.png') }}" alt="Slide 1" class="center-block img-responsive">
                         </div>
                       </div>
                     </div>
@@ -209,10 +209,10 @@
                             Event 2 Title
                           </h4>
                           <p>Event 3 Description </p>
-                          <a href="#" class="btn btn-more btn-lg"><i class="fa fa-plus"></i> Register to this event</a>
+                          <a href="#" class="btn btn-more btn-lg"><i class="fa fa-edit text-primary"></i> Register to this event</a>
                         </div>
                         <div class="col-md-6 hidden-xs">
-                          <img src="{{ asset('assets/img/slides/slide2.png') }}" alt="Slide 2" class="center-block img-responsive">
+                          <img src="{{ asset('assets/img/slides/slide12.png') }}" alt="Slide 2" class="center-block img-responsive">
                         </div>
                       </div>
                     </div>
@@ -227,10 +227,10 @@
                             Event 3 Title
                           </h4>
                           <p>Event 3 Description</p>
-                          <a href="#" class="btn btn-more btn-lg"><i class="fa fa-plus"></i> Register to this event</a>
+                          <a href="#" class="btn btn-more btn-lg"><i class="fa fa-edit text-primary"></i> Register to this event</a>
                         </div>
                         <div class="col-md-6 hidden-xs">
-                          <img src="{{ asset('assets/img/slides/slide2.png') }}" alt="Slide 2" class="center-block img-responsive">
+                          <img src="{{ asset('assets/img/slides/slide121.png') }}" alt="Slide 2" class="center-block img-responsive">
                         </div>
                       </div>
                     </div>
@@ -251,7 +251,7 @@
                   <h2 class="text-shadow-white">
                     HackHub is a full-featered hackathon organization platform.
                     Tailored for organizing,managing and ENJ0YING hackathons !
-                    <a href="about.html" class="btn btn-more"><i class="fa fa-plus"></i>Read more</a>
+                    <a href="{{ url('about_page') }}" class="btn btn-more"><i class="fa fa-plus"></i>Read more</a>
                   </h2>
                 </div>
               </div>
